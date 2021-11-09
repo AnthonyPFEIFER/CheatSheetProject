@@ -7,6 +7,7 @@ import com.javalearning.CheatSheetProject.service.BusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.dao.EmptyResultDataAccessException;
 
 
 @SpringBootApplication
@@ -20,14 +21,15 @@ public class CheatSheetProjectApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) {
+	public void run(String... args) throws Exception {
 
 		try {
+/*			System.console().writer().println("test");*/
 			HelloWorld hw = bs.getHelloWorld();
 			System.out.println(hw);
-			throw new Exception("I am Exception Alpha!");
 		} catch (Exception e) {
-	System.out.println("Ca fonctionne pas");
+			System.out.println("Ca fonctionne pas");
+			throw new Exception("I am Exception Alpha!");
 		}
 	}
 
