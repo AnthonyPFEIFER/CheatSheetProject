@@ -4,10 +4,12 @@ CREATE TABLE billionaires (
   id INT AUTO_INCREMENT  PRIMARY KEY,
   first_name VARCHAR(250) NOT NULL,
   last_name VARCHAR(250) NOT NULL,
-  career VARCHAR(250) DEFAULT NULL
+  career VARCHAR(250) NOT NULL,
+  mail VARCHAR(250) NOT NULL,
+  password VARCHAR(250) NOT NULL
 );
 
-INSERT INTO billionaires (first_name, last_name, career) VALUES
-  ('Aliko', 'Dangote', 'Billionaire Industrialist'),
-  ('Bill', 'Gates', 'Billionaire Tech Entrepreneur'),
-  ('Folrunsho', 'Alakija', 'Billionaire Oil Magnate');
+INSERT INTO billionaires (first_name, last_name, career, mail, password) VALUES
+  ('Anthony', 'Pfeifer', 'Apprenti développeur', 'anthony@gmail.com', 'anthony'),
+  ('Elliot', 'Bobillet', 'Pâtes et riz industries', 'elliot@gmail.com', 'elliot'),
+  ('David', 'Goodenough', 'Spassimal Company', 'david@gmail.com', 'david');
