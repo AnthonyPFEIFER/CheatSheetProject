@@ -32,5 +32,7 @@ public class BillionaireService {
         Billionaire savedBillionaire = billionaireRepository.save(billionaire);
         return savedBillionaire;
     }
-
+    public Billionaire updateBillionaire(Integer id, Billionaire billionaire) {
+        return billionaireRepository.save(billionaire);
+    }
 }

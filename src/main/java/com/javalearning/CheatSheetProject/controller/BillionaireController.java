@@ -32,13 +32,19 @@ public class BillionaireController {
     @ResponseStatus(HttpStatus.OK)
     public Optional<Billionaire> getBillionaireById(@PathVariable Integer id) { return billionaireService.getBillionaireById(id);}
 
-    @PostMapping("/create")
+    @PostMapping("/billionaire/create")
     @ResponseStatus(HttpStatus.CREATED)
     public Billionaire createNewBillionaire(@RequestBody Billionaire billionaire) {
         return billionaireService.createNewBillionaire(billionaire);
     }
 
-    @DeleteMapping({"/billionaire/{id}"})
+    @PutMapping({"/billionaire/edit/{id}"})
+    @ResponseStatus(HttpStatus.OK)
+    public Billionaire updateBillionaire(@PathVariable Integer id, @RequestBody Billionaire billionaire) {
+        return billionaireService.updateBillionaire(id, billionaire);
+    }
+
+    @DeleteMapping({"/billionaire/delete/{id}"})
     @ResponseStatus(HttpStatus.OK)
     public void deleteBillionaire(@PathVariable Integer id) {
         billionaireService.deleteBillionaire(id);
