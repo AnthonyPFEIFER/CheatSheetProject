@@ -11,5 +11,6 @@ CREATE TABLE billionaires (
 
 INSERT INTO billionaires (first_name, last_name, career, mail, password) VALUES
   ('Anthony', 'Pfeifer', 'Apprenti développeur', 'anthony@gmail.com', 'anthony'),
+  ('Julien', 'Bergès', 'Apprenti développeur ascendant security guy', 'julien@gmail.com', 'julien'),
   ('Elliot', 'Bobillet', 'Pâtes et riz industries', 'elliot@gmail.com', 'elliot'),
   ('David', 'Goodenough', 'Spassimal Company', 'david@gmail.com', 'david');

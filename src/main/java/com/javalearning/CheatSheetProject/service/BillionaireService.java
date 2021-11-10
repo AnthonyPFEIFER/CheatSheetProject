@@ -16,7 +16,7 @@ public class BillionaireService {
     @Autowired
     private BillionaireRepository billionaireRepository;
 
-    public Optional<Billionaire> getBillionaire(final Integer id) {
+    public Optional<Billionaire> getBillionaireById(final Integer id) {
         return billionaireRepository.findById(id);
     }
 
@@ -28,7 +28,7 @@ public class BillionaireService {
         billionaireRepository.deleteById(id);
     }
 
-    public Billionaire saveBillionaire(Billionaire billionaire) {
+    public Billionaire createNewBillionaire(Billionaire billionaire) {
         Billionaire savedBillionaire = billionaireRepository.save(billionaire);
         return savedBillionaire;
     }

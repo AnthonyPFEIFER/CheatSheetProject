@@ -24,7 +24,6 @@ public class CheatSheetProjectApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 		try {
-/*			System.console().writer().println("test");*/
 			HelloWorld hw = bs.getHelloWorld();
 			System.out.println(hw);
 		} catch (Exception e) {
